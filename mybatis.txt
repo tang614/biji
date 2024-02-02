@@ -1,0 +1,11 @@
+1、谈谈对sqlSessionFactory的理解
+(1) sqlSessionFactory是Mybatis中核心API,目的是创建出sqlSession对象(工厂模式)
+(2) sqlSessionFactory由sqlSessionFactoryBuilder创建，创建的过程中完成了全局配置文件和映射文件的加载和解析，将解析信息保存到Configuration对象中（建造者模式）
+(3) 在一个mybatis应用程序中，只有一个sqlSessionFactory对象，所以sqlSessionFactory应该是单例的
+
+2、谈谈对sqlSession的理解
+(1) sqlSession是MyBatis中的核心API，作用是通过它的相关API来实现对数据库数据的操作
+(2) sqlSession是由sqlSessionFactory来创建的
+(3) sqlSession是会话级别的，当一个新的会话到来时，需要新建一个sqlSession对象来处理，会话结束时关闭会话资源
+
+3、谈谈对MyBatis的理解
